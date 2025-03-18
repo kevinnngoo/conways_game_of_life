@@ -15,11 +15,11 @@ def dead_state(width, height):
     return [[0 for _ in range(width)] for _ in range(height)]
 
 def random_state(width, height):
-    # Create a dead board and randomize each cell to either 0 or 1 using random.randint
     state = dead_state(width, height)
     for row in range(height):
         for col in range(width):
-            state[row][col] = random.randint(0, 1)
+            # 30% chance alive, 70% dead
+            state[row][col] = 1 if random.random() < 0.3 else 0
     return state
 
 # Step 2: Print the board to the terminal.
@@ -97,6 +97,7 @@ if __name__ == "__main__":
 
     while True:
         os.system("cls" if os.name == "nt" else "clear")  # Clear terminal for animation
+        print(f"Board size: {len(starting_board_state[0])}x{len(starting_board_state)}")
         render(starting_board_state)
         starting_board_state = next_board_state(starting_board_state)
         time.sleep(0.1)  # Pause between frames to simulate motion
