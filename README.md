@@ -1,1 +1,3 @@
 ﻿# conways_game_of_life
+
+# Conway’s Game of Life is a terminal-based simulation written in Python that models the behavior of cellular automata. Each cell in a grid can be alive or dead, and the state of the board evolves over time according to simple rules based on neighboring cells. This project randomly initializes the board and continuously updates it, creating mesmerizing patterns and movement. It's a great beginner-friendly exercise in 2D arrays, loops, conditionals, and terminal animation. Built with clarity in mind, this version is ideal for anyone learning Python or interested in how simple rules can lead to complex behavior.
